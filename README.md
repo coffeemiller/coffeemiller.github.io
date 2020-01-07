@@ -3,7 +3,7 @@
 Python 코드파이터 예제풀이 공간입니다.
 
 ### Q.1
-```markdown
+```python
 #### 문제
 For param1 = 1 and param2 = 2, the output should be
 add(param1, param2) = 3.
