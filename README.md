@@ -15,3 +15,16 @@ add(param1, param2) = 3.
 def add(param1, param2):
     return param1+param2
 ```
+
+
+
+
+### Q.2
+```python
+#### 문제
+Given a year, return the century it is in. The first century spans from the year 1 up to and including the year 100, the second - from the year 101 up to and including the year 200, etc.
+
+#### 코딩
+def centuryFromYear(year):
+    return (year-1)//100+1
+```
