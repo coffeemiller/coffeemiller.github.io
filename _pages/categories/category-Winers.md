@@ -1,7 +1,7 @@
 ---
-title: "영리한 프로그래밍을 위한 알고리즘 강의 필기"
+title: "Winers 음원 강의 필기"
 layout: archive
-permalink: categories/algorithm-lesson-1
+permalink: categories/Winers
 author_profile: true
 sidebar_main: true
 ---
@@ -10,5 +10,5 @@ sidebar_main: true
 
 ***
 
-{% assign posts = site.categories['Algorithm Lesson 1'] %}
+{% assign posts = site.categories.Winers %}
 {% for post in posts %} {% include archive-single2.html type=page.entries_layout %} {% endfor %}
