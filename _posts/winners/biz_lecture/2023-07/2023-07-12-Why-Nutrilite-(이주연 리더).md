@@ -2,7 +2,7 @@
 title:  "Why Nutrilite? : 이주연 리더" 
 
 categories:
-  -  winners
+  -  Winners
 tags:
   - [Amway, Winners]
 
