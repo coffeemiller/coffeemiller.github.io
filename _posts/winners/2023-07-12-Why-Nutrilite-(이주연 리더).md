@@ -17,7 +17,6 @@ last_modified_at: 2023-07-18
 <iframe width="560" height="315" src="https://www.youtube.com/embed/S-q2z1WXDWI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Why Nutrilite / 이주연 리더 (7/12)
-+ [유튜브 보기](https://youtu.be/S-q2z1WXDWI)
 + 칼 랜보그
     - 1920년대부터 85년의 시간동안 지속된 비타민
     - "믿을 수 있는 원료를 얻으려면 내손으로!"
