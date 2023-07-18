@@ -1,7 +1,7 @@
 ---
 title: "Winers 음원 강의 필기"
 layout: archive
-permalink: categories/Winers
+permalink: categories/winers
 author_profile: true
 sidebar_main: true
 ---
@@ -10,5 +10,5 @@ sidebar_main: true
 
 ***
 
-{% assign posts = site.categories.Winers %}
+{% assign posts = site.categories.winers %}
 {% for post in posts %} {% include archive-single2.html type=page.entries_layout %} {% endfor %}
