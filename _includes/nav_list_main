@@ -11,14 +11,14 @@
         <span class="nav__sub-title">Amway</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "winners" %}
+                    {% if category[0] == "Winners" %}
                         <li><a href="/categories/winners" class="">강의정리 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "amway" %}
+                    {% if category[0] == "Amway" %}
                         <li><a href="/categories/amway" class="">암웨이 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
