@@ -16,6 +16,6 @@ sidebar_main: true
 {: .notice--warning} -->
 
 
-{% assign posts = site.categories.winners %}
+{% assign posts = site.categories.Winners %}
 {% for post in posts %} {% include archive-single2.html type=page.entries_layout %} {% endfor %}
 
