@@ -286,3 +286,6 @@ defaults:
       related: true
       mathjax: true
       sidebar_main: true
+
+# Adding
+futrue: true
