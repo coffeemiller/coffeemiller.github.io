@@ -1,7 +1,7 @@
 ---
 title: "Amway Business - STP"
 layout: archive
-permalink: /categories/stp
+permalink: /categories/amway/stp
 author_profile: true
 sidebar_main: true
 ---
