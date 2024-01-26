@@ -23,13 +23,13 @@
                     {% endif %}
                 {% endfor %}
             </ul>
-            <ul>
+            <!-- <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "STP" %}
                         <li><a href="/categories/amway/stp" class="">암웨이 바로알기 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
-            </ul>
+            </ul> -->
             <!-- <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Products" %}
