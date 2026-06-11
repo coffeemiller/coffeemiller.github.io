@@ -1,7 +1,7 @@
 ---
 title: "Amway Business - Products"
 layout: archive
-permalink: /categories/amway/products
+permalink: /categories/amway/products/
 author_profile: true
 sidebar_main: true
 ---

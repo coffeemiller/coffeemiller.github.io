@@ -12,11 +12,11 @@
       <li>
         <span class="nav__sub-title">Dev</span>
         <ul>
-          <li><a href="/categories/web">Web ({{ site.categories.Web.size | default: 0 }})</a></li>
-          <li><a href="/categories/java">Java ({{ site.categories.Java.size | default: 0 }})</a></li>
-          <li><a href="/categories/python">Python ({{ site.categories.Python.size | default: 0 }})</a></li>
-          <li><a href="/categories/flutter">Flutter ({{ site.categories.Flutter.size | default: 0 }})</a></li>
-          <li><a href="/categories/arduino">Arduino ({{ site.categories.Arduino.size | default: 0 }})</a></li>
+          <li><a href="/categories/web/">Web ({{ site.categories.Web.size | default: 0 }})</a></li>
+          <li><a href="/categories/java/">Java ({{ site.categories.Java.size | default: 0 }})</a></li>
+          <li><a href="/categories/python/">Python ({{ site.categories.Python.size | default: 0 }})</a></li>
+          <li><a href="/categories/flutter/">Flutter ({{ site.categories.Flutter.size | default: 0 }})</a></li>
+          <li><a href="/categories/arduino/">Arduino ({{ site.categories.Arduino.size | default: 0 }})</a></li>
         </ul>
       </li>
 
@@ -24,7 +24,7 @@
       <li>
         <span class="nav__sub-title">Thinking</span>
         <ul>
-          <li><a href="/categories/thinking">Now Thinking ({{ site.categories.Thinking.size | default: 0 }})</a></li>
+          <li><a href="/categories/thinking/">Now Thinking ({{ site.categories.Thinking.size | default: 0 }})</a></li>
         </ul>
       </li>
 
@@ -32,9 +32,9 @@
       <li>
         <span class="nav__sub-title">Amway</span>
         <ul>
-          <li><a href="/categories/winners">강의정리 ({{ site.categories['강의정리'].size | default: 0 }})</a></li>
-          <li><a href="/categories/selfdevelopment">자기계발 ({{ site.categories['자기계발'].size | default: 0 }})</a></li>
-          <li><a href="/categories/amway">암웨이 일반 ({{ site.categories.Amway.size | default: 0 }})</a></li>
+          <li><a href="/categories/winners/">강의정리 ({{ site.categories['강의정리'].size | default: 0 }})</a></li>
+          <li><a href="/categories/selfdevelopment/">자기계발 ({{ site.categories['자기계발'].size | default: 0 }})</a></li>
+          <li><a href="/categories/amway/">암웨이 일반 ({{ site.categories.Amway.size | default: 0 }})</a></li>
         </ul>
       </li>
 

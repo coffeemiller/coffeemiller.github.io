@@ -1,7 +1,7 @@
 ---
 title: "Thinking - Self Development"
 layout: archive
-permalink: /categories/selfdevelopment
+permalink: /categories/selfdevelopment/
 author_profile: true
 sidebar_main: true
 ---

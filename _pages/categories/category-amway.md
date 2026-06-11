@@ -1,7 +1,7 @@
 ---
 title: "Amway Universe"
 layout: archive
-permalink: /categories/amway
+permalink: /categories/amway/
 author_profile: true
 sidebar_main: true
 ---

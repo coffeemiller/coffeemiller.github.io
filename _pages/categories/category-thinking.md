@@ -1,7 +1,7 @@
 ---
 title: "Now Thinking"
 layout: archive
-permalink: /categories/thinking
+permalink: /categories/thinking/
 author_profile: true
 sidebar_main: true
 ---

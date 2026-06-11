@@ -1,7 +1,7 @@
 ---
 title: "Java Development"
 layout: archive
-permalink: /categories/java
+permalink: /categories/java/
 author_profile: true
 sidebar_main: true
 ---

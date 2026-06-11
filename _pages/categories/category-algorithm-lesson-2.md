@@ -1,7 +1,7 @@
 ---
 title: "자료 구조와 알고리즘 (with C#)"
 layout: archive
-permalink: categories/algorithm-lesson-2
+permalink: /categories/algorithm-lesson-2/
 author_profile: true
 sidebar_main: true
 ---

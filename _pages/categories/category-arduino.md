@@ -1,7 +1,7 @@
 ---
 title: "Arduino Development"
 layout: archive
-permalink: /categories/arduino
+permalink: /categories/arduino/
 author_profile: true
 sidebar_main: true
 ---
