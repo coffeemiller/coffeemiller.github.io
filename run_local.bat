@@ -16,11 +16,11 @@ if %errorlevel% neq 0 (
     exit /b %errorlevel%
 )
 
-echo.
 echo 서버를 시작합니다. 잠시만 기다려 주세요...
+echo (파일 변경 감지를 위해 Polling 방식을 사용합니다.)
 echo.
 
-REM Jekyll 서버 실행
-bundle exec jekyll serve
+REM Jekyll 서버 실행 (--force_polling 옵션 추가)
+bundle exec jekyll serve --force_polling
 
 pause
