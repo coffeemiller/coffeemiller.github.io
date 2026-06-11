@@ -5,141 +5,24 @@ classes: wide
 
 {{ content }}
 
-{% assign all_posts = site.posts %}
-{% assign featured_categories = "Winners,Thinking,Self development" | split: "," %}
+<div class="main-post-list">
+  {% if paginator %}
+    {% assign posts = paginator.posts %}
+  {% else %}
+    {% assign posts = site.posts %}
+  {% endif %}
 
-<div class="hero-section">
-  <h1 class="hero-title animate-text">Coffeemiller Blog</h1>
-  <p class="hero-stats">Exploring <span class="neon-text">{{ all_posts.size }}</span> Insights for Freedom</p>
-</div>
+  {% for post in posts %}
+    {% include archive-single.html %}
+  {% endfor %}
 
-<div class="recent-posts-container">
-  <h2 class="section-title"><span class="cyber-bracket">[</span> Recent Insights <span class="cyber-bracket">]</span></h2>
-  
-  <div class="vertical-grid">
-    {% for post in all_posts limit: 10 %}
-      <article class="modern-card">
-        <div class="card-meta">
-          <span class="card-category">{{ post.categories | first }}</span>
-          <span class="card-date">{{ post.date | date: "%Y.%m.%d" }}</span>
-        </div>
-        <h3 class="card-title">
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        </h3>
-        <p class="card-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
-        <a href="{{ post.url | relative_url }}" class="read-more">Read More <i class="fas fa-chevron-right"></i></a>
-      </article>
-    {% endfor %}
-  </div>
+  {% include paginator.html %}
 </div>
 
 <style>
-.hero-section {
-  text-align: center;
-  padding: 3em 0;
-  margin-bottom: 2em;
-}
-
-.hero-title {
-  font-size: clamp(2.5rem, 8vw, 4rem) !important;
-  margin: 0;
-  background: linear-gradient(135deg, #ff007f, #7b2ff7, #00f2ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 0 15px rgba(255, 0, 127, 0.2));
-}
-
-.section-title {
-  text-align: center;
-  font-size: 1.8rem !important;
-  margin-bottom: 2.5rem;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-
-.cyber-bracket {
-  color: #ff007f;
-  font-weight: 900;
-}
-
-.vertical-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  max-width: 900px;
-  margin: 0 auto 5em auto;
-}
-
-.modern-card {
-  background: rgba(255, 255, 255, 0.02);
-  backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
-  padding: 1.8rem;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-}
-
-.modern-card:hover {
-  transform: translateX(10px);
-  border-color: #ff007f;
-  background: rgba(255, 255, 255, 0.04);
-  box-shadow: -5px 0 20px rgba(255, 0, 127, 0.2);
-}
-
-.card-meta {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 0.8rem;
-  font-size: 0.8rem;
-}
-
-.card-category {
-  color: #00f2ff;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.card-date {
-  color: #555;
-  font-family: var(--code-font);
-}
-
-.card-title {
-  font-size: 1.3rem !important;
-  margin: 0 0 1rem 0;
-}
-
-.card-title a {
-  color: #fff !important;
-  text-decoration: none;
-}
-
-.card-excerpt {
-  color: #aaa;
-  font-size: 0.9rem;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-}
-
-.read-more {
-  font-size: 0.85rem;
-  color: #ff007f;
-  font-weight: 700;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.read-more i {
-  font-size: 0.7rem;
-  transition: transform 0.2s;
-}
-
-.modern-card:hover .read-more i {
-  transform: translateX(5px);
+.main-post-list {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 4em;
 }
 </style>
