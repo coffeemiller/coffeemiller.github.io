@@ -7,60 +7,43 @@
       <li>
             📂 <span style="font-family:'Cafe24Oneprettynight';">전체 글 수</style> <span style="font-family:'Coming Soon';">{{sum}}</style> <span style="font-family:'Cafe24Oneprettynight';">개</style> 
       </li>
+      
+      <!-- DEV Category -->
+      <li>
+        <span class="nav__sub-title">Dev</span>
+        <ul>
+          <li><a href="/categories/web">Web</a></li>
+          <li><a href="/categories/java">Java</a></li>
+          <li><a href="/categories/python">Python</a></li>
+          <li><a href="/categories/flutter">Flutter</a></li>
+          <li><a href="/categories/arduino">Arduino</a></li>
+        </ul>
+      </li>
+
+      <!-- THINKING Category -->
+      <li>
+        <span class="nav__sub-title">Thinking</span>
+        <ul>
+          <li><a href="/categories/thinking">Now Thinking</a></li>
+        </ul>
+      </li>
+
+      <!-- AMWAY Category -->
       <li>
         <span class="nav__sub-title">Amway</span>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "Winners" %}
-                        <li><a href="/categories/winners" class="">강의정리 ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "Amway" %}
-                        <li><a href="/categories/amway" class="">암웨이 ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <!-- <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "STP" %}
-                        <li><a href="/categories/amway/stp" class="">암웨이 바로알기 ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul> -->
-            <!-- <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "Products" %}
-                        <li><a href="/categories/amway/products" class="">암웨이 제품들 ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul> -->
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "Thinking" %}
-                        <li><a href="/categories/thinking" class="">생각하기 ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "Self development" %}
-                        <li><a href="/categories/selfdevelopment" class="">자기계발 ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-
-        <!-- <span class="nav__sub-title">C/C++/C#</span>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "Cpp" %}
-                        <li><a href="/categories/cpp" class="">C ++ ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul> -->
+        <ul>
+          {% for category in site.categories %}
+            {% if category[0] == "Winners" %}
+              <li><a href="/categories/winners">강의정리 ({{category[1].size}})</a></li>
+            {% elsif category[0] == "Self development" %}
+              <li><a href="/categories/selfdevelopment">자기계발 ({{category[1].size}})</a></li>
+            {% elsif category[0] == "Amway" %}
+              <li><a href="/categories/amway">암웨이 일반 ({{category[1].size}})</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
       </li>
+
       <li>
             <br>
             <img src="https://komarev.com/ghpvc/?username=coffeemiller-blog&color=green&label=HITS" alt="Hits">

@@ -1,8 +1,7 @@
 ---
 title:  "Why Nutrilite? : 이주연 리더" 
 
-categories:
-  -  Winners
+categories: [Amway, 강의정리]
 tags: [Amway, Winners]
 toc: true
 toc_sticky: true
