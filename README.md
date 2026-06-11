@@ -29,20 +29,32 @@
 
 ## 🛠 실행 및 로컬 개발 방법
 
-### 1. 사전 요구 사항
-- Ruby 및 Bundler 설치
-- Node.js 및 npm 설치 (JS 빌드 필요 시)
+### 1. 사전 요구 사항 (Windows)
+1.  **Ruby 설치:** [RubyInstaller](https://rubyinstaller.org/downloads/)에서 `Ruby+Devkit 3.3.x (x64)` 버전을 설치합니다.
+    -   설치 중 **"Add Ruby executables to your PATH"**에 체크합니다.
+    -   설치 마지막에 `ridk install` 창이 뜨면 **3번**을 입력하여 설치를 완료합니다.
+    -   *참고: 백신(Avira 등)에서 ruby.exe를 차단할 경우, 설치 폴더를 예외 설정해 주세요.*
 
-### 2. 의존성 설치
-```bash
-# Ruby gems 설치
+### 2. 초기 설정 (최초 1회)
+터미널(PowerShell)에서 프로젝트 폴더로 이동 후 아래 명령어를 실행합니다.
+```powershell
+# Bundler 설치
+gem install bundler
+
+# 프로젝트 의존성 설치
 bundle install
 
-# npm 패키지 설치
+# (선택) JS 빌드가 필요한 경우
 npm install
 ```
 
 ### 3. 로컬 서버 실행
+제공된 배치 파일을 사용하거나 직접 명령어를 입력합니다.
+
+#### 방법 A: 배치 파일 사용 (추천)
+-   `run_local.bat` 파일을 더블 클릭합니다. (한글 깨짐 방지 및 서버 자동 실행)
+
+#### 방법 B: 수동 실행
 ```bash
 bundle exec jekyll serve
 ```
