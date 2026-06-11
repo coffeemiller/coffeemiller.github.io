@@ -1,7 +1,8 @@
 source "https://rubygems.org"
 
 gem "jekyll", "~> 4.3.2"
-gem "minimal-mistakes-jekyll", "4.26.2" # 최신 버전 권장
+gem "minimal-mistakes-jekyll", "4.26.2"
+gem "jekyll-sass-converter", "~> 2.0" # sass-embedded 대신 sassc 사용을 위해 추가
 
 group :jekyll_plugins do
   gem "jekyll-paginate"
