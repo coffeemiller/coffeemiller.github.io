@@ -5,16 +5,163 @@ classes: wide
 
 {{ content }}
 
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+{% assign all_posts = site.posts %}
+{% assign categories = "Winners,Amway,Thinking,Self development" | split: "," %}
 
-{% if paginator %}
-  {% assign posts = paginator.posts %}
-{% else %}
-  {% assign posts = site.posts %}
-{% endif %}
+<div class="hero-section">
+  <h1 class="hero-title animate-text">Deep Space Universe</h1>
+  <p class="hero-stats">Exploring <span class="neon-text">{{ all_posts.size }}</span> Insights for Freedom</p>
+</div>
 
-{% for post in posts %}
-  {% include archive-single.html %}
-{% endfor %}
+<div class="bento-grid">
+  {% for cat in categories %}
+    {% assign cat_posts = site.categories[cat] %}
+    {% if cat_posts.size > 0 %}
+      <section class="bento-item bento-item--{{ cat | slugify }}">
+        <div class="bento-header">
+          <h2 class="bento-title">{{ cat }}</h2>
+          <span class="bento-count">{{ cat_posts.size }} Posts</span>
+        </div>
+        <div class="bento-content">
+          <ul class="post-list-minimal">
+            {% for post in cat_posts limit: 5 %}
+              <li>
+                <a href="{{ post.url | relative_url }}">
+                  <span class="post-date">{{ post.date | date: "%m.%d" }}</span>
+                  <span class="post-title">{{ post.title }}</span>
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+          {% if cat_posts.size > 5 %}
+            <a href="{{ '/categories/' | append: (cat | slugify) | relative_url }}" class="view-all-btn">View All →</a>
+          {% endif %}
+        </div>
+      </section>
+    {% endif %}
+  {% endfor %}
+</div>
 
-{% include paginator.html %}
+<style>
+.hero-section {
+  text-align: center;
+  padding: 4em 0;
+  margin-bottom: 3em;
+}
+
+.hero-title {
+  font-size: clamp(3rem, 10vw, 5rem) !important;
+  margin: 0;
+  line-height: 1;
+  background: linear-gradient(135deg, #ff007f, #7b2ff7, #00f2ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 20px rgba(255, 0, 127, 0.3));
+}
+
+.hero-stats {
+  font-size: 1.2rem;
+  margin-top: 1em;
+  color: #888;
+}
+
+.neon-text {
+  color: #ff007f;
+  font-weight: 700;
+  text-shadow: 0 0 10px #ff007f;
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding-bottom: 5em;
+}
+
+.bento-item {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.bento-item:hover {
+  border-color: #ff007f;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(255, 0, 127, 0.1);
+}
+
+.bento-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.bento-title {
+  font-size: 1.5rem !important;
+  margin: 0;
+  color: #00f2ff !important;
+}
+
+.bento-count {
+  font-size: 0.9rem;
+  color: #666;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.post-list-minimal {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.post-list-minimal li {
+  margin-bottom: 1rem;
+}
+
+.post-list-minimal a {
+  display: flex;
+  gap: 1rem;
+  color: #bbb;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.post-list-minimal a:hover {
+  color: #fff;
+}
+
+.post-date {
+  color: #555;
+  font-family: var(--code-font);
+}
+
+.view-all-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  color: #ff007f;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.view-all-btn:hover {
+  transform: translateX(5px);
+  text-shadow: 0 0 8px #ff007f;
+}
+
+/* Custom Grid Sizing for Winners */
+@media (min-width: 1000px) {
+  .bento-item--winners {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}
+</style>
