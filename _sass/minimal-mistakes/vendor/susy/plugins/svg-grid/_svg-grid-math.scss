@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // SVG Grid Math
 // =============
 
@@ -59,9 +61,9 @@
 
   $gutter: su-call('su-gutter', $grid);
 
-  @if (type-of($gutter) == 'string') {
+  if (type-of($gutter) == 'string') {
     @return 'calc(#{$container} * #{$gutter} / 2)';
   }
 
-  @return $container * $gutter / 2;
-}
+  @return math.div($container * $gutter, 2);
+  }

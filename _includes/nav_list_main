@@ -61,9 +61,9 @@
                 {% endfor %}
             </ul> -->
       </li>
-      <li>	
-            <br>      
-            <img src="https://hitscounter.dev/badge.svg?url=https%3A%2F%2Fcoffeemiller.github.io&label=hits&color=%2379C83D&labelColor=%23555555&style=flat">
+      <li>
+            <br>
+            <img src="https://komarev.com/ghpvc/?username=coffeemiller-blog&color=green&label=HITS" alt="Hits">
       </li>
   </ul>
 </nav>
