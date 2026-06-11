@@ -7,11 +7,168 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
+/* Josh W. Comeau Style Variables */
+:root {
+  --primary-color: #ff0a78;
+  --secondary-color: #0080ff;
+  --bg-color: #0f0f2d;
+  --text-color: #ffffff;
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-blur: blur(12px);
+  --body-font: 'Inter', -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+  --code-font: 'JetBrains Mono', Monaco, Consolas, "Lucida Console", monospace;
+}
+
+body {
+  background-color: var(--bg-color) !important;
+  font-family: var(--body-font) !important;
+  color: var(--text-color) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--body-font) !important;
+  font-weight: 700 !important;
+}
+
+pre, code {
+  font-family: var(--code-font) !important;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  &:hover {
+    color: var(--secondary-color);
+  }
+}
+
+/* Glassmorphism Styles */
+.masthead {
+  background-color: rgba(15, 15, 45, 0.8) !important;
+  backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid var(--glass-border) !important;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.sidebar {
+  background: var(--card-bg);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 1.5em;
+  margin-bottom: 1em;
+}
+
+.archive__item {
+  background: var(--card-bg);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 1.5em;
+  margin-bottom: 2em;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    border-color: var(--secondary-color);
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .archive__item-title {
+    margin-top: 0.5em;
+    a {
+      color: var(--text-color) !important;
+      &:hover {
+        color: var(--primary-color) !important;
+      }
+    }
+  }
+}
+
+.page__content {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 2em;
+  border-radius: 16px;
+  border: 1px solid var(--glass-border);
+}
+
+/* Detailed Styling */
+.btn {
+  border-radius: 30px !important;
+  padding: 0.6em 1.5em !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease !important;
+  border: none !important;
+  
+  &--primary {
+    background: linear-gradient(135deg, var(--primary-color), #ff4d9d) !important;
+    color: white !important;
+    &:hover {
+      box-shadow: 0 0 20px rgba(255, 10, 120, 0.4);
+      transform: scale(1.05);
+    }
+  }
+}
+
+blockquote {
+  border-left: 5px solid var(--primary-color) !important;
+  background: rgba(255, 10, 120, 0.05);
+  padding: 1em 1.5em;
+  border-radius: 0 12px 12px 0;
+  font-style: italic;
+  color: #ccd6f6;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  margin: 2em 0;
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  overflow: hidden;
+
+  th {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--secondary-color);
+    padding: 12px;
+    text-align: left;
+  }
+
+  td {
+    padding: 12px;
+    border-top: 1px solid var(--glass-border);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+}
 
 // "Cafe24Oneprettynight"
 @font-face {
     font-family: 'Cafe24Oneprettynight';
-    // src: local('Cafe24Oneprettynight'), url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff');
     src: local('Cafe24Oneprettynight'), url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff') format('woff');
     font-weight: normal;
     font-style: normal;
