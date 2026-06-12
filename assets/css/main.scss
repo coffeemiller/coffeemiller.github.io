@@ -37,15 +37,17 @@
 /* Light Theme */
 [data-theme='light'] {
   --primary-color: #2980b9;
-  --bg-color: #f8f9fa;
+  --bg-color: #ffffff;
   --masthead-bg: #ffffff;
-  --card-bg: #ffffff;
-  --text-color: #2c3e50;
-  --title-color: #1a1c1e;
+  --card-bg: #f8f9fa;
+  --text-color: #333333;
+  --title-color: #000000;
   --border-color: #e1e4e8;
-  --link-color: #2980b9;
-  --link-hover-color: #3498db;
+  --link-color: #0366d6;
+  --link-hover-color: #0056b3;
   --sidebar-bg: #ffffff;
+  --taxonomy-bg: #e1e4e8;
+  --taxonomy-color: #444444;
 }
 
 body {
@@ -53,6 +55,28 @@ body {
   font-family: var(--body-font) !important;
   color: var(--text-color) !important;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Taxonomy (Categories & Tags) Visibility Fix */
+.page__taxonomy-item-category, .page__taxonomy-item-tag {
+  background-color: var(--taxonomy-bg, var(--border-color)) !important;
+  color: var(--taxonomy-color, var(--text-color)) !important;
+  padding: 2px 8px !important;
+  border-radius: 4px !important;
+  margin-right: 5px !important;
+  font-size: 0.8em !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  
+  &:hover {
+    background-color: var(--primary-color) !important;
+    color: #ffffff !important;
+  }
+}
+
+[data-theme='dark'] {
+  --taxonomy-bg: #30363d;
+  --taxonomy-color: #c9d1d9;
 }
 
 h1, h2, h3, h4, h5, h6 {

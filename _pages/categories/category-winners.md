@@ -1,7 +1,7 @@
 ---
 title: "강의정리"
 layout: archive
-permalink: /categories/winners
+permalink: /categories/winners/
 author_profile: true
 sidebar_main: true
 ---
