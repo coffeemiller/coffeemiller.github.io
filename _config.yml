@@ -21,7 +21,7 @@ name                     : "COFFEEMILLER"
 description              : "자유를 향한 열정"
 url                      : "https://coffeemiller.github.io"
 baseurl                  : ""
-repository               : "coffeemiller/comments" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "coffeemiller/coffeemiller.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
