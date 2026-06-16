@@ -40,7 +40,7 @@
 
       <li>
             <br>
-            <a href="https://myhits.vercel.app"><img src="https://myhits.vercel.app/api/hit/https%3A%2F%2Fcoffeemiller.github.io%2F?color=blue&label=HITS&size=medium&base_count=50" alt="HITS" /></a>
+            <a href="https://myhits.vercel.app"><img src="https://myhits.vercel.app/api/hit/https%3A%2F%2Fcoffeemiller.github.io%2F?color=blue&label=HITS&size=medium&base=50" alt="HITS" /></a>
       </li>
   </ul>
 </nav>
